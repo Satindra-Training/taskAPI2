@@ -38,7 +38,8 @@ userRouter.post("/signup",upload.single("avatar"),async(req,res)=>{
 
        }catch(error){
         console.log(error);
-        res.status(200).json({"message":"Email is Already registered with US !"});
+        res.status(200).json(error); 
+        // res.status(200).json({"message":"Email is Already registered with US !"});
        }
 });
 userRouter.post("/changepass",async(req,res)=>{
